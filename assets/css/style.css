@@ -1,0 +1,116 @@
+@font-face {
+    font-family:Poppins ;
+    src: url(../font/Poppins-Light.ttf);
+}
+*{
+    font-family: Poppins;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(175, 135, 214) #faf9f9;
+}
+*::-webkit-scrollbar {
+    width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #faf9f9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(175, 135, 214);
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #444;
+}
+.container{
+    display: grid;
+    box-shadow: 11px 16px 18px #888888; 
+    width: 323px;
+}
+.ulpart{
+    height: 150px;
+    overflow-y: scroll;
+}
+h1{
+    text-align: center;
+    color: rgb(175, 135, 214);
+    font-size: 4rem;
+    opacity: 0.4;
+    margin: 0;
+    margin-top: 60px;
+}
+form{
+    max-width: 100%;
+}
+input{
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    border: none;
+    width: 220px;
+    padding: 0.6rem;
+    text-align: left;
+    margin-right: 9px;
+}
+small{
+    font-size: 8px;
+    color: #b5b5b5;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.input::placeholder{
+    color: #d5d5d5;
+}
+input:focus{
+    outline-color:rgb(196, 169, 223);
+}
+#todos{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    border: none;
+    width: 220px;
+    margin: 1px auto;
+}
+
+#todos li{
+    font-size: 14px;
+    padding: 10px;
+    border-top: 1px solid #f5f5f5;
+    cursor: pointer;
+    padding-left: -159px;
+    text-align: left;
+}
+
+#todos li.completed{
+    text-decoration: line-through;
+    color: #b5b5b5;
+}
+.delete {
+    display: none;
+}
+@media only screen and (max-width: 330px){
+    .container{
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+    li{
+        width: 220px;
+    }
+    ul{
+        margin: auto;
+    }
+}
